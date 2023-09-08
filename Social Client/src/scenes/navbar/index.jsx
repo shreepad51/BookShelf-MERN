@@ -56,7 +56,7 @@ const Navbar = () => {
             },
           }}
         >
-          Sociopedia
+          Bookshelf
         </Typography>
         {isNonMobileScreens && (
           <FlexBetween
@@ -65,7 +65,7 @@ const Navbar = () => {
             gap="3rem"
             padding="0.1rem 1.5rem"
           >
-            <InputBase placeholder="Search..." />
+            <InputBase placeholder="Search Books" />
             <IconButton>
               <Search />
             </IconButton>
@@ -105,6 +105,7 @@ const Navbar = () => {
               input={<InputBase />}
             >
               <MenuItem value={fullName}>
+                
                 <Typography>{fullName}</Typography>
               </MenuItem>
               <MenuItem onClick={() => dispatch(setLogout())}>Log Out</MenuItem>
