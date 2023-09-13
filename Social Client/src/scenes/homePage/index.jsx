@@ -2,12 +2,9 @@ import { Box, useMediaQuery } from "@mui/material";
 import { useSelector } from "react-redux";
 import Navbar from "scenes/navbar";
 import UserWidget from "scenes/widgets/UserWidget";
-import MyPostWidget from "scenes/widgets/MyPostWidget";
+import NewPost from "scenes/widgets/NewPost";
 import PostsWidget from "scenes/widgets/PostsWidget";
-import LibraryWidget from "scenes/widgets/LibraryWidget";
 import FriendListWidget from "scenes/widgets/FriendListWidget";
-import googleBooksSearch from "scenes/booksearch";
-import Main from "components/Main";
 
 const HomePage = () => {
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
@@ -24,22 +21,21 @@ const HomePage = () => {
         gap="0.5rem"
         justifyContent="space-between"
       >
-        <Box flexBasis={isNonMobileScreens ? "26%" : undefined}>
+        <Box flexBasis={isNonMobileScreens ? "30%" : undefined}>
           <UserWidget userId={_id} picturePath={picturePath} /> 
         </Box>
         <Box
-          flexBasis={isNonMobileScreens ? "42%" : undefined}
+          flexBasis={isNonMobileScreens ? "40%" : undefined}
           mt={isNonMobileScreens ? undefined : "2rem"}
         >
-          <MyPostWidget picturePath={picturePath} />
-          My Books 
-          <Main></Main>
+          <NewPost picturePath={picturePath} />
+          Search Books
           <PostsWidget userId={_id} />
         </Box>
         {isNonMobileScreens && (
-          <Box flexBasis="26%">
-            <LibraryWidget />
-            <Box m="2rem 0" />
+          <Box flexBasis="28%">
+            
+            <Box m="3rem 0" />
             <FriendListWidget userId={_id} />
           </Box>
         )}

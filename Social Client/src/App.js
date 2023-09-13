@@ -7,7 +7,6 @@ import { useSelector } from "react-redux";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import { themeSettings } from "./theme";
-import Main from "components/Main";
 
 function App() {
   const mode = useSelector((state) => state.mode);
@@ -18,8 +17,6 @@ function App() {
     <div className="app">
       
       <BrowserRouter>
-      
-      
       <ThemeProvider theme={theme}>
           <CssBaseline />
           <Routes>
