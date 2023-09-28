@@ -42,7 +42,7 @@ import {Box,Divider,Typography,InputBase,useTheme,Button,IconButton,useMediaQuer
       formData.append("description", post);
 
       formData.append("picturePath", 'pathtoBooks');
-      const response = await fetch(`http://localhost:3001/posts`, {
+      const response = await fetch(`http://https://bookshelf-universe.onrender.com/posts`, {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
         body: formData,
